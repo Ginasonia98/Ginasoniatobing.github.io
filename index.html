@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bunny Film</title>
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+      integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+      integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Boostrap icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+
+    <!-- Font Family Work Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Family Open Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Roboto:wght@300&family=Source+Sans+Pro:wght@200&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Work Sans", sans-serif;
+        background-image: url("https://ae01.alicdn.com/kf/HTB1uPy5bffsK1RjSszgq6yXzpXar.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .signin-container {
+        padding: 48px 24px;
+        width: 400px;
+        background: #ffffff;
+        border: 1px solid black;
+        border-radius: 8px;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+      }
+      .menus {
+        width: 300px;
+        display: flex;
+        justify-content: space-around;
+        padding-top: 16px;
+      }
+      .signin-title {
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 29px;
+        /* Brand/Indigo/Marine - #000032 */
+        color: #000032;
+        margin-bottom: 41px;
+      }
+      .input-email {
+        padding: 13px 20px;
+        width: 352px;
+        height: 45px;
+        background: #ffffff;
+        border: 1.5px solid #000032;
+        border-radius: 8px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #b3b3b3;
+      }
+      .mb-12 {
+        margin-bottom: 12px;
+      }
+      .mb-24 {
+        /* margin-bottom: 24px; */
+        margin-top: 24px;
+        margin-bottom: 24px;
+      }
+      .signin-btn {
+        padding: 16px 24px;
+        width: 352px;
+        height: 54px;
+        border-radius: 8px;
+      }
+      .signup-btn {
+        width: 352px;
+        height: 35px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #f6a973;
+      }
+      .sosmed-btn {
+        padding: 0px 12px;
+        width: 352px;
+        height: 40px;
+        background: #f2f2f2;
+        border-radius: 4px;
+      }
+      .navbar-brand {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 45px;
+      }
+
+      .d-flex {
+        width: 30vw;
+      }
+      @media screen and (max-width: 992px) {
+        .d-flex {
+          width: 70vw;
+        }
+      }
+      .search-input {
+        border-right: none;
+        border-top-left-radius: 24px;
+        border-bottom-left-radius: 24px;
+      }
+      .search-btn {
+        background-color: #fff;
+        border-left: none;
+        border-top-right-radius: 24px;
+        border-bottom-right-radius: 24px;
+      }
+
+      .footer-dark {
+        padding: 50px 0;
+        color: #f0f9ff;
+        background-color: #282d32;
+        margin-top: 100px;
+      }
+      .footer-dark h3 {
+        margin-top: 0;
+        margin-bottom: 12px;
+        font-weight: bold;
+        font-size: 16px;
+      }
+
+      .footer-dark ul {
+        padding: 0;
+        list-style: none;
+        line-height: 1.6;
+        font-size: 14px;
+        margin-bottom: 0;
+      }
+
+      .footer-dark ul a {
+        color: inherit;
+        text-decoration: none;
+        opacity: 0.6;
+      }
+
+      .footer-dark ul a:hover {
+        opacity: 0.8;
+      }
+
+
+      .footer-dark .item.text {
+        margin-bottom: 36px;
+      }
+
+      @media (max-width: 767px) {
+        .footer-dark .item.text {
+          margin-bottom: 0;
+        }
+      }
+
+      .footer-dark .item.text p {
+        opacity: 0.6;
+        margin-bottom: 0;
+      }
+
+      .footer-dark .item.social {
+        text-align: center;
+      }
+
+      @media (max-width: 991px) {
+        .footer-dark .item.social {
+          text-align: center;
+          margin-top: 20px;
+        }
+      }
+
+      .footer-dark .item.social > a {
+        font-size: 20px;
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        display: inline-block;
+        text-align: center;
+        border-radius: 50%;
+        box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4);
+        margin: 0 8px;
+        color: #fff;
+        opacity: 0.75;
+      }
+
+      .footer-dark .item.social > a:hover {
+        opacity: 0.9;
+      }
+
+      .footer-dark .copyright {
+        text-align: center;
+        padding-top: 24px;
+        opacity: 0.3;
+        font-size: 13px;
+        margin-bottom: 0;
+      }
+
+
+      .btn-primary {
+        margin: 10px auto;
+        width: 20vw;
+        padding-top: 0px;
+        display: block;
+      }
+
+      .alert-info {
+        background-color: #00f5ff;
+        margin-top: 5rem;
+        margin-left: 80em;
+        width: 15vw;
+      }
+
+      .bi-bell {
+        background-color: tra;
+        border: none;
+        height: 24px;
+        width: 24px;
+        vertical-align: middle;
+        margin-right: 0.5rem;
+      }
+
+      .btn-info{
+        margin-right: 0.5rem;
+      }
+
+      .d-flex {
+        width: 50vw;
+      }
+
+      @media screen and (max-width: 992px) {
+        .d-flex {
+        width: 90vw;
+        }
+      }
+
+      .color-1{
+      color: #E0144C;
+      }
+      .color-2{
+      color:#9A1663;
+      }
+
+      .no-hovered-link {
+        text-decoration: none;
+        color: black;
+      }
+      .no-hovered-link:hover {
+      text-decoration: underline;
+      color: blue;
+      }
+    </style>
+  </head>
+  <body class="screen">
+    <nav class="navbar navbar-expand bg-light sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <span class="color-1">Bunny</span><span class="color-2">Film</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <p class="card-text bg-light menus" style="transform: rotate(0)">
+          <a class="no-hovered-link" href="index.html">Main Menu</a>
+          <a class="no-hovered-link" href="home.html">Home</a>
+          <a class="no-hovered-link" href="movie.html">Movie</a>
+        </p>
+        <div
+          class="collapse navbar-collapse"
+          id="navbarSupportedContent"
+          style="justify-content: space-around"
+        >
+          <form class="d-flex" role="search">
+            <div class="input-group">
+              <input
+                class="form-control search-input"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <span class="input-group-text search-btn" id="basic-addon2">
+                <i class="bi bi-search"></i>
+              </span>
+            </div>
+          </form>
+        </div>
+
+        <!-- Button trigger modal -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#"
+          class="bi bi-bell"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"
+          />
+        </svg>
+        <a href="member.html" class="btn btn-info" role="button">Member</a>
+        <button
+          class="btn btn-outline-warning"
+          data-bs-toggle="modal"
+          data-bs-target="#modalchikomovie"
+          type="button"
+        >
+          Sign in
+        </button>
+      </div>
+    </nav>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="modalchikomovie"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog d-flex justify-content-center">
+        <div class="modal-content w-auto">
+          <div class="modal-body">
+            <div class="signin-container">
+              <div style="display: flex; justify-content: space-between">
+                <div class="signin-title">Sign In</div>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                  style="position: relative; bottom: 35px; left: 15px"
+                ></button>
+              </div>
+              <div class="mb-24">
+                <div>
+                  <input
+                    class="input-email"
+                    type="text"
+                    placeholder="Enter phone number or email address"
+                  />
+                </div>
+              </div>
+              <div
+                class="form-check form-switch mb-24"
+                style="display: flex; justify-content: center"
+              >
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  role="switch"
+                  id="flexSwitchCheckDefault"
+                />
+                <label
+                  class="form-check-label"
+                  for="flexSwitchCheckDefault"
+                  style="padding-left: 10px"
+                  >Keep me sign in</label
+                >
+              </div>
+              <button
+                type="button"
+                class="btn btn-secondary btn-secondary signin-btn mb-24"
+              >
+                Sign in
+              </button>
+              <button type="button" class="btn btn-light signup-btn mb-24">
+                Sign up
+              </button>
+              <div class="mb-24" style="text-align: center">or</div>
+              <button
+                type="button"
+                class="btn btn-secondary btn-light sosmed-btn mb-12"
+              >
+                <i class="bi bi-google"></i>
+                Continue with Google
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary btn-light sosmed-btn mb-12"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="#1978D2"
+                  class="bi bi-facebook"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
+                  />
+                </svg>
+                Continue with Facebook
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary btn-light sosmed-btn"
+              >
+                <i class="bi bi-apple"></i>
+                Continue with Apple
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- carousel -->
+    <div
+      id="carouselExampleIndicators"
+      class="carousel slide carousel-fade"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img
+            src="https://images-na.ssl-images-amazon.com/images/S/pv-target-images/40e972834187bfbae5901637cb2cb3741191b62fca1db7dbca666e6958bdeabb._UY500_UX667_RI_V_TTW_.jpg "
+            width="500vw"
+            height="500vx"
+            class="d-block w-100"
+            alt="Once upon a forest"
+          />
+        </div>
+        <div class="carousel-item" data-bs-interval="10000">
+          <img
+            src="https://img1.hotstarext.com/image/upload/f_auto,t_hcdl/sources/r1/cms/prod/5356/685356-h"
+            width="500vw"
+            height="500vx"
+            class="d-block w-100"
+            alt="Wib"
+          />
+        </div>
+        <div class="carousel-item" data-bs-interval="10000">
+          <img
+            src="https://www.playblog.it/wp-content/uploads/2021/12/Back-to-the-Outback-Ritorno-alla-natura-arriva-su-Netflix-una-commedia-animata-per-tutta-la-famiglia-960x640.jpg"
+            width="500vw"
+            height="500vx"
+            class="d-block w-100"
+            alt="Pesta Cucian"
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- alert -->
+    <div class="alert alert-info" role="alert">
+      New movie list available. Let's watch now!
+    </div>
+    <img
+      src="data:image/png;base64,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"
+      class="img-thumbnail"
+      style="
+        margin: 5px auto;
+        width: 50%;
+        height: 30vw;
+        padding-top: 50px;
+        display: block;
+        margin-top: 10em;
+      "
+    />
+    <button type="button" class="btn btn-primary">Come join us</button>
+  </body>
+  <div class="footer-dark">
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-md-3 item">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="#">Petshop</a></li>
+              <li><a href="#">Movie streaming</a></li>
+              <li><a href="#">Delivery food </a></li>
+            </ul>
+          </div>
+          <div class="col-sm-6 col-md-3 item">
+            <h3>About</h3>
+            <ul>
+              <li><a href="#">Company</a></li>
+              <li><a href="#">Team</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6 item text">
+            <h3>Psalm The Royal Company</h3>
+            <p>
+              Psalm The Royal Company is a company engaged in 3 fields such as:
+              Delivery food, Movie Streaming, and Delivery Food. This company
+              was founded by Gina Sonia in 2022. In the future, this company is
+              expected to grow rapidly, of course with the blessing of God
+            </p>
+          </div>
+          <button type="button" class="btn btn-link">
+            <a href="contact-us.html">Contact us </a>
+          </button>
+          <p class="copyright">Psalm The Royal Company © 2022</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</html>
