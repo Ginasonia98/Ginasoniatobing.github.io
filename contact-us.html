@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bunny Film</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+   <meta name="HandheldFriendly" content="true">
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+      integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+      crossorigin="anonymous"
+    ></script>
+<style>
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    font-family: Montserrat-Regular, sans-serif;
+}
+
+a {
+    font-family: Montserrat-Regular;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #666666;
+    margin: 0px;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+}
+
+a:focus {
+    outline: none !important;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #57b846;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0px;
+}
+
+p {
+    font-family: Montserrat-Regular;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #666666;
+    margin: 0px;
+}
+
+ul,
+li {
+    margin: 0px;
+    list-style-type: none;
+}
+
+input {
+    outline: none;
+    border: none;
+}
+
+textarea {
+    outline: none;
+    border: none;
+}
+
+textarea:focus,
+input:focus {
+    border-color: transparent !important;
+}
+
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+input:focus:-moz-placeholder {
+    color: transparent;
+}
+
+input:focus::-moz-placeholder {
+    color: transparent;
+}
+
+input:focus:-ms-input-placeholder {
+    color: transparent;
+}
+
+textarea:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+textarea:focus:-moz-placeholder {
+    color: transparent;
+}
+
+textarea:focus::-moz-placeholder {
+    color: transparent;
+}
+
+textarea:focus:-ms-input-placeholder {
+    color: transparent;
+}
+
+input::-webkit-input-placeholder {
+    color: #aaaaaa;
+}
+
+input:-moz-placeholder {
+    color: #aaaaaa;
+}
+
+input::-moz-placeholder {
+    color: #aaaaaa;
+}
+
+input:-ms-input-placeholder {
+    color: #aaaaaa;
+}
+
+textarea::-webkit-input-placeholder {
+    color: #aaaaaa;
+}
+
+textarea:-moz-placeholder {
+    color: #aaaaaa;
+}
+
+textarea::-moz-placeholder {
+    color: #aaaaaa;
+}
+
+textarea:-ms-input-placeholder {
+    color: #aaaaaa;
+}
+
+/*---------------------------------------------*/
+button {
+    outline: none !important;
+    border: none;
+    background: transparent;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+iframe {
+    border: none !important;
+}
+
+
+
+.bg-contact100 {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.container-contact100 {
+    width: 100%;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-image: url("https://ae01.alicdn.com/kf/HTB1uPy5bffsK1RjSszgq6yXzpXar.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wrap-contact100 {
+    width: 1163px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 110px 130px 157px 148px;
+}
+
+/*------------------------------------------------------------------
+[  ]*/
+.contact100-pic {
+    width: 310px;
+    padding-top: 55px;
+}
+
+.contact100-pic img {
+    max-width: 100%;
+}
+
+
+.contact100-form {
+    width: 390px;
+}
+
+.contact100-form-title {
+    display: block;
+    font-family: Montserrat-ExtraBold;
+    font-size: 24px;
+    color: #333333;
+    line-height: 1.2;
+    text-align: left;
+    padding-bottom: 36px;
+}
+
+input.input100 {
+    height: 50px;
+    border-radius: 25px;
+    padding: 0 30px 0 50px;
+}
+
+input.input100[name="email"] {
+    padding: 0 30px 0 54px;
+}
+
+textarea.input100 {
+    min-height: 150px;
+    border-radius: 25px;
+    padding: 14px 30px;
+}
+
+.wrap-input100 {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    margin-bottom: 10px;
+}
+
+.input100 {
+    display: block;
+    width: 100%;
+    background: #e6e6e6;
+    font-family: Montserrat-Bold;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #666666;
+}
+
+
+.focus-input100 {
+    display: block;
+    position: absolute;
+    border-radius: 25px;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 0px 0px 0px;
+    color: rgba(132, 106, 221, 0.5);
+}
+
+.input100:focus+.focus-input100 {
+    -webkit-animation: anim-shadow 0.5s ease-in-out forwards;
+    animation: anim-shadow 0.5s ease-in-out forwards;
+}
+
+@-webkit-keyframes anim-shadow {
+    to {
+        box-shadow: 0px 0px 60px 25px;
+        opacity: 0;
+    }
+}
+
+@keyframes anim-shadow {
+    to {
+        box-shadow: 0px 0px 60px 25px;
+        opacity: 0;
+    }
+}
+
+.symbol-input100 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    border-radius: 25px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-left: 30px;
+    pointer-events: none;
+    color: #aaaaaa;
+    font-size: 15px;
+
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.input100:focus+.focus-input100+.symbol-input100 {
+    color: #846add;
+    padding-left: 22px;
+}
+
+.container-contact100-form-btn {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.contact100-form-btn {
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    background: #fff;
+    font-family: Montserrat-Bold;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #fff;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.contact100-form-btn:hover {
+    background: #333333;
+}
+
+
+@media (max-width: 1200px) {
+    .contact100-pic {
+        width: 33.5%;
+    }
+
+    .contact100-form {
+        width: 44%;
+    }
+}
+
+@media (max-width: 992px) {
+    .wrap-contact100 {
+        padding: 110px 80px 157px 90px;
+    }
+
+    .contact100-pic {
+        width: 35%;
+    }
+
+    .contact100-form {
+        width: 55%;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrap-contact100 {
+        padding: 110px 80px 157px 80px;
+    }
+
+    .contact100-pic {
+        display: none;
+    }
+
+    .contact100-form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .wrap-contact100 {
+        padding: 110px 15px 157px 15px;
+    }
+}
+
+.validate-input {
+    position: relative;
+}
+
+.alert-validate::before {
+    content: attr(data-validate);
+    position: absolute;
+    max-width: 70%;
+    background-color: white;
+    border: 1px solid #c80000;
+    border-radius: 13px;
+    padding: 4px 25px 4px 10px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 8px;
+    pointer-events: none;
+
+    font-family: Montserrat-Medium;
+    color: #c80000;
+    font-size: 13px;
+    line-height: 1.4;
+    text-align: left;
+
+    visibility: hidden;
+    opacity: 0;
+
+    -webkit-transition: opacity 0.4s;
+    -o-transition: opacity 0.4s;
+    -moz-transition: opacity 0.4s;
+    transition: opacity 0.4s;
+}
+
+.alert-validate::after {
+    content: "\f06a";
+    font-family: FontAwesome;
+    display: block;
+    position: absolute;
+    color: #c80000;
+    font-size: 15px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 13px;
+}
+
+.alert-validate:hover:before {
+    visibility: visible;
+    opacity: 1;
+}
+
+@media (max-width: 992px) {
+    .alert-validate::before {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.btn-primary{
+  width: 352px;
+  height: 35px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #0008C1;
+}
+</style>
+</head>
+<body>
+<div class="bg-contact100">
+    <div class="container-contact100">
+        <div class="wrap-contact100">
+            <div class="contact100-pic js-tilt" data-tilt>
+                <img src="data:image/png;base64,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" alt="IMG Animal">
+            </div>
+            <form class="contact100-form validate-form">
+                <span class="contact100-form-title">
+                    Contact Us
+                </span>
+                <div class="wrap-input100 validate-input" data-validate="Name is required">
+                    <input class="input100" type="text" name="name" placeholder=" Input Your Name">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.gmail">
+                    <input class="input100" type="text" name="email" placeholder="Input your Email">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="wrap-input100 validate-input" data-validate="Message is required">
+                    <textarea class="input100" name="message" placeholder="Input your Feedback"></textarea>
+                    <span class="focus-input100"></span>
+                </div>
+                <div class="container-contact100-form-btn">
+                    <button type="button" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
