@@ -4,8 +4,8 @@
     <title>Bunny Film</title>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-   <meta name="HandheldFriendly" content="true">
-      <!-- bootstrap -->
+    <meta name="HandheldFriendly" content="true">
+  <!-- bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -20,6 +20,23 @@
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
       integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
       crossorigin="anonymous"
     ></script>
 
@@ -71,6 +88,10 @@
       border-top-left-radius: 24px;
       border-bottom-left-radius: 24px;
     }
+
+     .d-flex {
+        width: 50vw;
+      }
     .search-btn{
       background-color: #fff;
       border-left: none;
@@ -234,6 +255,23 @@
           width: 100%;
         }
       }
+       .btn-link {
+        display: flex;
+        justify-content: right;
+        align-items: flex-end;
+        color: #fff;
+      }
+
+        .btn-link:hover {
+        color: white !important;
+      }
+
+       .bi-search {
+        margin-left: -2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
   </style>
 </head>
 <body class="screen" >
@@ -274,9 +312,7 @@
               placeholder="Search"
               aria-label="Search"
             />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
+            <i class="bi bi-search"></i>
           </form>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -388,8 +424,7 @@
         <h3>Psalm The Royal Company</h3>
         <p>Psalm The Royal Company is a company engaged in 3 fields such as: Delivery food, Movie Streaming, and Delivery Food. This company was founded by Gina Sonia in 2022. In the future, this company is expected to grow rapidly, of course with the blessing of God</p>
         </div>
-        <button type="button" class="btn btn-link ">
-        <a href="contact-us.html">Contact us </a></button>
+        <a href="contact-us.html" class="btn btn-link" role="button">Contact Us</a>
         <p class="copyright">Psalm The Royal Company © 2022</p>
     </div>
 </footer>

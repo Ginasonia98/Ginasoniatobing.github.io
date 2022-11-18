@@ -259,21 +259,21 @@
         position: fixed;
         bottom: 0px;
         right: 10px;
-        width: 30vw;
+        width: 10vw;
         z-index: 1000;
       }
 
-      .bi-bell {
+       .bi-bell {
         background-color: tra;
         border: none;
         height: 24px;
         width: 24px;
         vertical-align: middle;
-        margin: 0px 0.5rem;
+        margin-left: 3rem;
       }
 
       .btn-info {
-        margin-right: 0.5rem;
+        margin-left: 0.5rem;
       }
 
       .d-flex {
@@ -342,6 +342,31 @@
         .sosmed-btn {
           width: 100%;
         }
+
+        .alert-info {
+          width: 40%;
+        }
+      }
+        .btn-link {
+        display: flex;
+        justify-content: right;
+        align-items: flex-end;
+        color: #fff;
+      }
+
+      .btn-link:hover {
+        color: white !important;
+      }
+
+      .bi-search {
+        margin-left: -2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .btn-outline-warning{
+        margin-left: 0.5rem;
       }
     </style>
   </head>
@@ -383,9 +408,7 @@
               placeholder="Search"
               aria-label="Search"
             />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
+            <i class="bi bi-search"></i>
           </form>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -619,9 +642,7 @@
               expected to grow rapidly, of course with the blessing of God
             </p>
           </div>
-          <button type="button" class="btn btn-link">
-            <a href="contact-us.html">Contact us </a>
-          </button>
+            <a href="contact-us.html" class="btn btn-link" role="button">Contact Us</a>
           <p class="copyright">Psalm The Royal Company © 2022</p>
         </div>
       </div>

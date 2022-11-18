@@ -97,6 +97,18 @@
         border-top-left-radius: 24px;
         border-bottom-left-radius: 24px;
       }
+
+       .d-flex {
+        width: 50vw;
+      }
+
+      .bi-search {
+        margin-left: -2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
       .search-btn {
         background-color: #fff;
         border-left: none;
@@ -275,6 +287,16 @@
           width: 90vw !important;
         }
       }
+        .btn-link {
+        display: flex;
+        justify-content: right;
+        align-items: flex-end;
+        color: #fff;
+      }
+
+        .btn-link:hover {
+        color: white !important;
+      }
     </style>
   </head>
   <body class="screen">
@@ -315,9 +337,7 @@
               placeholder="Search"
               aria-label="Search"
             />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
+            <i class="bi bi-search"></i>
           </form>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -917,9 +937,7 @@
           </div>
         </div>
         <div class="text-center">
-          <button type="button" class="btn btn-link">
-            <a href="contact-us.html">Contact us </a>
-          </button>
+          <a href="contact-us.html" class="btn btn-link" role="button">Contact Us</a>
           <p class="copyright">Psalm The Royal Company © 2022</p>
         </div>
       </div>
